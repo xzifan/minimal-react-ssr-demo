@@ -5,6 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack serve --config ./webpack.conf.js --mode=development",
+    "dev:build-server": "NODE_ENV=development webpack --config webpack.server.js --mode=development -w",
+    "dev:start": "nodemon ./server-build/index.js",
+    "dev-all": "npm-run-all --parallel build dev:*",
     "build": "webpack --config ./webpack.conf.js --mode=production"
   },
   "repository": {
@@ -19,8 +22,12 @@
   },
   "homepage": "https://github.com/xzifan/minimal-react-ssr-demo#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.4",

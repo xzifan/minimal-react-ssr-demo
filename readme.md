@@ -14,5 +14,7 @@ For the web application:
 
 For the server side rendering:
 ...
-
+### node version
+1. Run `npm install` or `yarn`
+2. Use the npm scripts we have configured to run locally `npm run dev-all` to run in parallel the build script and all scripts that start with `dev:*` - including `dev:build-server` and `dev:start`.
 
