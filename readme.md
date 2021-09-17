@@ -17,4 +17,5 @@ For the server side rendering:
 ### node version
 1. Run `npm install` or `yarn`
 2. Use the npm scripts we have configured to run locally `npm run dev-all` to run in parallel the build script and all scripts that start with `dev:*` - including `dev:build-server` and `dev:start`.
+3. Now, open http://localhost:3001/ in your web browser and you will see your server-side rendered app.
 
