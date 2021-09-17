@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require("webpack")
+const webpack = require("webpack");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
     entry: 'src/index.js',
@@ -40,7 +41,7 @@ module.exports = {
         filename: '[name].bundle.js',
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin({}),
+        // new webpack.HotModuleReplacementPlugin({}),
         new HtmlWebpackPlugin({
             template: "src/index.html",
         }),
@@ -61,6 +62,14 @@ module.exports = {
             percentBy: null,
           })
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                extractComments: false,
+            })
+        ]
+    },
     devServer: {
         port: '8080',
         hot: true,
