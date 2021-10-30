@@ -33,7 +33,7 @@ export default function VideoBox(){
       </div>
     </div>
     <div className={styles.vid_player} style={getIframeSize(size)}>
-      <iframe  src="//player.bilibili.com/player.html?aid=797663148&bvid=BV1cy4y1k7A2&cid=252900431&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+      <iframe  src="//player.bilibili.com/player.html?aid=797663148&bvid=BV1cy4y1k7A2&cid=252900431&page=1" scrolling="no" border="0" frameBorder="no" framespacing="0" allowFullScreen="true"> </iframe>
     </div>
   </div>
 }
